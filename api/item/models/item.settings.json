@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "name": "Item",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "itemName": {
+      "type": "string",
+      "required": true
+    },
+    "longDescription": {
+      "type": "text"
+    },
+    "imageGallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "sub_categories": {
+      "collection": "sub-category",
+      "via": "items",
+      "dominant": true
+    },
+    "coverImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "BlockOneTitle": {
+      "type": "string"
+    },
+    "BlockOneContent": {
+      "type": "richtext"
+    },
+    "BlockTwoTitle": {
+      "type": "string"
+    },
+    "BlockTwoContent": {
+      "type": "richtext"
+    },
+    "BlockThreeTitle": {
+      "type": "string"
+    },
+    "BlockThreeContent": {
+      "type": "richtext"
+    },
+    "BlockFourTitle": {
+      "type": "string"
+    },
+    "BlockFourContent": {
+      "type": "richtext"
+    },
+    "BlockFiveTitle": {
+      "type": "string"
+    },
+    "BlockFiveContent": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "supplementaryDescription": {
+      "type": "text"
+    },
+    "TestimonialOne": {
+      "type": "richtext"
+    },
+    "TestimonialTwo": {
+      "type": "richtext"
+    },
+    "TestimonialThree": {
+      "type": "richtext"
+    }
+  }
+}

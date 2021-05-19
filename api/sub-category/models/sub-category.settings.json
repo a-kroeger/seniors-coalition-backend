@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Subcategories",
+  "info": {
+    "name": "SubCategory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "tiles": {
+      "unique": true,
+      "collection": "tile",
+      "via": "sub_categories",
+      "dominant": true
+    },
+    "items": {
+      "via": "sub_categories",
+      "collection": "item"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

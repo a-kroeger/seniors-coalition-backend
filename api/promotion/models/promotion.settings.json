@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promotions",
+  "info": {
+    "name": "Promotion",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "PromotionDescription": {
+      "type": "text"
+    },
+    "Logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "PromotionURL": {
+      "type": "string"
+    },
+    "CompanyName": {
+      "type": "string"
+    }
+  }
+}

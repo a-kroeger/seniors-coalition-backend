@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiles",
+  "info": {
+    "name": "Tile"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_categories": {
+      "via": "tiles",
+      "collection": "sub-category"
+    }
+  }
+}
